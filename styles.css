@@ -471,11 +471,19 @@ h2 {
 }
 
 .section-summary {
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 0 3px;
   color: #777772;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
+}
+
+.services-section .section-heading h2 {
+  font-size: clamp(42px, 5vw, 64px);
+}
+
+.services-section .section-heading .eyebrow {
+  font-size: 11px;
 }
 
 .services-grid {
@@ -495,11 +503,29 @@ h2 {
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background: transparent;
-  transition: background 180ms ease;
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.service-card::before {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--accent);
+  content: "";
+  transition: transform 180ms ease;
 }
 
 .service-card:hover {
   background: var(--white);
+}
+
+.service-card:hover::before,
+.service-card:focus-within::before {
+  transform: scaleX(1);
 }
 
 .service-number {
@@ -513,20 +539,21 @@ h2 {
 }
 
 .service-icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   margin-bottom: 24px;
   display: grid;
   place-items: center;
-  border: 1px solid #dcdcd7;
+  border: 1px solid #e6d6cf;
+  background: var(--accent-soft);
   color: var(--accent);
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .service-card h3 {
   max-width: 210px;
   margin-bottom: 9px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
   letter-spacing: -0.45px;
   line-height: 1.35;
@@ -535,8 +562,8 @@ h2 {
 .service-card p {
   margin-bottom: 20px;
   color: #777772;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.75;
 }
 
 .service-card > a {
