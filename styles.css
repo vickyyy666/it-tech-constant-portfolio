@@ -401,11 +401,24 @@ h2 span {
   letter-spacing: 0.8px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 180ms ease;
 }
 
 .scroll-cue span:last-child {
+  display: inline-block;
   color: var(--accent);
   font-size: 16px;
+  transition: transform 180ms ease;
+}
+
+.scroll-cue:hover,
+.scroll-cue:focus-visible {
+  color: var(--ink);
+}
+
+.scroll-cue:hover span:last-child,
+.scroll-cue:focus-visible span:last-child {
+  transform: translateY(4px);
 }
 
 .intro-band {
