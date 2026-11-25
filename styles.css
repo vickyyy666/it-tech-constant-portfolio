@@ -1133,8 +1133,7 @@ h2 {
 
   .hero-visual {
     width: min(100%, 270px);
-    justify-self: start;
-    margin-left: 0;
+    justify-self: center;
     padding: 0;
   }
 
