@@ -30,3 +30,24 @@ if (menuToggle && navigation) {
     }
   });
 }
+
+const enquiryForm = document.querySelector("#enquiry-form");
+
+if (enquiryForm) {
+  enquiryForm.addEventListener("submit", () => {
+    const bodyField = enquiryForm.querySelector('input[name="body"]');
+    const name = enquiryForm.querySelector("#enquiry-name").value.trim();
+    const service = enquiryForm.querySelector("#enquiry-service").value;
+    const phone = enquiryForm.querySelector("#enquiry-phone").value.trim();
+    const message = enquiryForm.querySelector("#enquiry-message").value.trim();
+
+    bodyField.value = [
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      `Service: ${service}`,
+      "",
+      "Enquiry:",
+      message || "No additional details provided.",
+    ].join("\n");
+  });
+}
