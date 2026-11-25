@@ -51,3 +51,22 @@ if (enquiryForm) {
     ].join("\n");
   });
 }
+
+const servicesSection = document.querySelector(".services-section");
+
+if (
+  servicesSection &&
+  "IntersectionObserver" in window &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  servicesSection.classList.add("is-reveal-ready");
+
+  const servicesObserver = new IntersectionObserver((entries, observer) => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      servicesSection.classList.add("is-visible");
+      observer.disconnect();
+    }
+  }, { threshold: 0.12 });
+
+  servicesObserver.observe(servicesSection);
+}
