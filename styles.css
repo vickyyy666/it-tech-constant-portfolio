@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
   color-scheme: light;
@@ -11,7 +11,6 @@
   --accent-soft: #f1e7e2;
   --font-body: "DM Sans", "Helvetica Neue", sans-serif;
   --font-display: "Manrope", "Helvetica Neue", sans-serif;
-  --font-hero: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
   --shell: 1200px;
 }
 
@@ -175,43 +174,18 @@ button:focus-visible {
 
 .hero {
   position: relative;
-  width: 100%;
-  margin: 0;
   min-height: 650px;
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
   align-items: center;
-  padding: 45px max(36px, calc((100vw - var(--shell)) / 2)) 90px;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 82% 18%, rgb(93 142 158 / 22%), transparent 35%),
-    linear-gradient(118deg, #10253a 0%, #15364a 56%, #1c4658 100%);
-  color: #f7f7f4;
-}
-
-.hero.page-shell {
-  width: 100%;
-  max-width: none;
-}
-
-.hero::before {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgb(255 255 255 / 3%) 1px, transparent 1px);
-  background-size: 100% 72px;
-  content: "";
-  pointer-events: none;
+  padding-top: 45px;
+  padding-bottom: 90px;
 }
 
 .hero-copy {
   position: relative;
   z-index: 1;
   padding-top: 5px;
-}
-
-.hero .eyebrow {
-  color: #bfced7;
-  font-family: var(--font-hero);
 }
 
 .eyebrow {
@@ -259,21 +233,13 @@ h1 {
   line-height: 0.98;
 }
 
-.hero h1 {
-  max-width: 760px;
-  color: #f7f7f4;
-  font-family: var(--font-hero);
-  font-weight: 700;
-  letter-spacing: -6px;
-}
-
 h1 span,
 h2 span {
   color: #898985;
 }
 
 .hero h1 span {
-  color: #e6ad94;
+  color: var(--accent);
 }
 
 .hero-intro {
@@ -284,34 +250,10 @@ h2 span {
   line-height: 1.8;
 }
 
-.hero .hero-intro {
-  color: #c8d4dc;
-  font-family: var(--font-hero);
-}
-
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 28px;
-}
-
-.hero .button,
-.hero .text-link {
-  font-family: var(--font-hero);
-}
-
-.hero .button-dark {
-  background: #f7f7f4;
-  color: #10253a;
-}
-
-.hero .button-dark:hover {
-  background: #e6ad94;
-  color: #10253a;
-}
-
-.hero .text-link {
-  color: #f7f7f4;
 }
 
 .button {
@@ -384,18 +326,9 @@ h2 span {
   font-size: 11px;
 }
 
-.hero .hero-audience p {
-  color: #bdcbd3;
-  font-family: var(--font-hero);
-}
-
 .hero-audience strong {
   color: var(--ink);
   font-weight: 600;
-}
-
-.hero .hero-audience strong {
-  color: #f7f7f4;
 }
 
 .hero-visual {
@@ -407,10 +340,6 @@ h2 span {
 
 .portrait-frame {
   aspect-ratio: 4 / 5;
-  padding: 9px;
-  border: 1px solid rgb(255 255 255 / 24%);
-  background: rgb(255 255 255 / 5%);
-  box-shadow: 0 24px 80px rgb(3 14 25 / 28%);
 }
 
 .hero-portrait {
@@ -426,12 +355,12 @@ h2 span {
   display: grid;
   gap: 4px;
   padding-top: 13px;
-  color: #f7f7f4;
+  color: var(--ink);
 }
 
 .caption-index {
   margin-bottom: 2px;
-  color: #bdcbd3;
+  color: #777772;
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 1.3px;
@@ -445,12 +374,8 @@ h2 span {
 }
 
 .caption-role {
-  color: #bdcbd3;
+  color: #777772;
   font-size: 10px;
-}
-
-.hero .scroll-cue {
-  color: #bdcbd3;
 }
 
 .scroll-cue {
@@ -1152,7 +1077,6 @@ h2 {
     min-height: auto;
     grid-template-columns: 1fr;
     gap: 34px;
-    padding-inline: 20px;
     padding-top: 62px;
     padding-bottom: 71px;
   }
@@ -1334,10 +1258,6 @@ h2 {
   .page-shell,
   .header-inner {
     width: calc(100% - 32px);
-  }
-
-  .hero {
-    padding-inline: 16px;
   }
 
   h1 {
