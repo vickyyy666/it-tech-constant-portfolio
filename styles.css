@@ -339,16 +339,21 @@ h2 span {
 }
 
 .portrait-frame {
-  aspect-ratio: 4 / 5;
+  padding: 9px;
+  border: 1px solid #e4e0dc;
+  background: var(--white);
+  box-shadow: 12px 12px 0 var(--accent-soft);
 }
 
 .hero-portrait {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 22%;
-  filter: grayscale(100%);
+  filter: saturate(0.86) contrast(1.03);
+  border-radius: 1px;
 }
 
 .portrait-caption {
@@ -630,35 +635,43 @@ h2 {
   font-size: clamp(38px, 4.4vw, 55px);
 }
 
+.audience-intro {
+  max-width: 430px;
+  margin: 24px 0 0;
+  color: #6e6e69;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
 .audience-detail {
   border-top: 1px solid #d9dad6;
 }
 
 .audience-detail article {
-  padding: 22px 0 24px;
+  padding: 24px 0 27px;
   border-bottom: 1px solid #d9dad6;
 }
 
 .audience-index {
   color: var(--accent);
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.1px;
 }
 
 .audience-detail h3 {
-  margin: 8px 0 6px;
-  font-size: 16px;
+  margin: 9px 0 7px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
 .audience-detail p {
-  max-width: 425px;
+  max-width: 470px;
   margin-bottom: 0;
   color: #6e6e69;
-  font-size: 11px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .about-section {
@@ -689,8 +702,8 @@ h2 {
   max-width: 485px;
   margin-bottom: 22px;
   color: #74746f;
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .about-link {
@@ -1210,7 +1223,7 @@ h2 {
   }
 
   .about-body {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .about-signoff {
