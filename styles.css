@@ -424,7 +424,7 @@ h2 span {
 .intro-band {
   border-top: 1px solid #373735;
   border-bottom: 1px solid #373735;
-  background: var(--ink);
+  background: #000;
 }
 
 .intro-band-inner {
@@ -434,6 +434,7 @@ h2 span {
   justify-content: space-between;
   gap: 20px;
   padding-block: 16px;
+  background: #000;
   font-family: var(--font-display);
 }
 
