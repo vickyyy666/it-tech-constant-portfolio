@@ -432,6 +432,7 @@ h2 span {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  font-family: var(--font-display);
 }
 
 .intro-band p {
