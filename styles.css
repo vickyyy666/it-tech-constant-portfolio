@@ -422,43 +422,57 @@ h2 span {
 }
 
 .intro-band {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 1px solid #373735;
+  border-bottom: 1px solid #373735;
+  background: var(--ink);
 }
 
 .intro-band-inner {
-  min-height: 88px;
+  min-height: 104px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  padding-block: 16px;
   font-family: var(--font-display);
 }
 
 .intro-band p {
   margin: 0;
-  color: #6d6d68;
-  font-size: 13px;
+  color: #d3d3ce;
+  font-size: 16px;
 }
 
 .intro-band strong {
-  color: var(--ink);
+  color: #fff;
   font-weight: 700;
 }
 
 .intro-tags {
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: #74746e;
+  gap: 9px;
+  color: #f7f7f5;
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
+.intro-tags span:nth-child(odd) {
+  padding: 8px 12px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 4%);
+}
+
 .intro-tags span:nth-child(even) {
-  color: var(--accent);
+  width: 5px;
+  height: 5px;
+  flex: 0 0 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  font-size: 0;
 }
 
 .section {
@@ -1183,12 +1197,16 @@ h2 {
   }
 
   .intro-band p {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .intro-tags {
     gap: 10px;
     font-size: 8px;
+  }
+
+  .intro-tags span:nth-child(odd) {
+    padding: 7px 10px;
   }
 
   .section {
